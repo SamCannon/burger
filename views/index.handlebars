@@ -1,0 +1,75 @@
+<main>
+
+		<header>
+
+			<h1>Eat Da Burger!</h1>
+
+		</header>
+
+		<p id="left">
+
+			{{#each data}}
+
+			{{#unless this.devoured}}
+
+				<ul>
+
+					<li>{{this.id}} &nbsp; {{this.burger_name}}
+
+						<form method="POST" action="/burgers/update?_method=PUT">
+
+							<input type="hidden" type="text" name="burger_id" value={{this.id}}>
+							
+							<button type="submit">Devour It!</button>
+
+						</form>
+
+					</li>
+
+				</ul>
+
+			{{/unless}}
+
+			{{/each}}
+
+		</p>
+
+		<p id="center">
+
+			<form method="POST" action="/burgers/create">
+
+				<input type="text" name="burger_name" id="enter_text">
+
+				<button type="submit">Submit</button>
+
+				<br />
+				
+				<label>Enter the name of the burger you want to eat. Click the submit button</label>
+
+			</form>
+
+		</p>
+
+		<p id="right">
+
+			{{#each data}}
+
+				{{#if this.devoured}}
+
+					<ul>
+
+						<li>
+
+							<input type="text" placeholder="{{this.id}}. {{this.}}" readonly>
+
+						</li>
+
+					</ul>
+
+				{{/if}}
+
+			{{/each}}
+
+		</p>
+
+</main>

@@ -1,0 +1,32 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "node, handlebars, and mysql example",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamCannon/burger.git"
+  },
+  "keywords": [
+    "node",
+    "handlebars",
+    "mysql"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamCannon/burger/issues"
+  },
+  "homepage": "https://github.com/SamCannon/burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "express-handlebars": "^3.0.0",
+    "method-override": "^2.3.9",
+    "mysql": "^2.14.1",
+    "path": "^0.12.7"
+  }
+}
