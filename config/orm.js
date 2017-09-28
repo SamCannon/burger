@@ -19,7 +19,7 @@ let orm = {
 
 	update: (devId, callBack) => {
 
-		connection.query('UPDATE burgers SET devoured=true WHERE id=devId;', (err, result) => {
+		connection.query('UPDATE burgers SET devoured=true WHERE id=' + devId + ';', (err, result) => {
 
 			if(err) throw err;
 
@@ -31,7 +31,7 @@ let orm = {
 		
 	create: (newBurger, callBack) => {
 
-		connection.query('INSERT INTO burgers (burger_name) VALUES newBurger', /**[req.body.burger],**/ (err, result) => {
+		connection.query('INSERT INTO burgers (burger_name) VALUES' + newBurger + ';', /**[req.body.burger],**/ (err, result) => {
 
 			if(err)throw err;
 			
